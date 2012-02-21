@@ -1,0 +1,20 @@
+<h1>Welcome to the Blog forum!</h1>
+
+<p>
+	This is the area for me and you to post pointless shit!
+</p>
+
+<% if signed_in? %>
+<p> We can say useless shit now!</p></br>
+	<table class = "front" summary="For signed-in users">
+		<tr>
+			<td class = "main">
+				<h1 class="micropost">Sup?</h1>
+				<%= render 'shared/micropost_form' %>
+				<%= render 'shared/feed' %>
+			</td>
+		</tr>
+	</table>
+<% else %>
+<%= link_to "Sign up to say useless shit!", signin_path, :class => "signup_button_wider round" %>
+<% end %>

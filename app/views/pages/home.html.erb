@@ -1,0 +1,13 @@
+<h1>Welcome to htgbrando's homepage!</h1>
+
+<p>
+		Welcome to my page, it contains my thoughts, opinions and other things about me, as well as a small blog.<br>
+		If you don't like it, fuck off.
+</p>
+
+<% if signed_in? %>
+<%= link_to "Movie Reviews/Ratings", movie_ratings_path, :class => "signup_button_wider round" %>
+<%= link_to "Blog & Forum", blog_forum_path, :class => "signup_button_wider round" %>
+<% else %>
+<%= link_to "Sign in", signin_path, :class => "signup_button round" %>
+<% end %>
